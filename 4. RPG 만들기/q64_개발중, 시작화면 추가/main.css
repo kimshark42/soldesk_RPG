@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;  /*row -> 자식들을 가로 방향으로 정렬, column -> 자식들을 세로 방향으로 정렬*/
+    gap: 20px;
+    height: 1800px;
+    width: 1000px;
+    background-image: url(top_banner.jpg);
+    background-size: cover;
+}
+
+/*좌측 사이드바*/
+#left_side{
+    display: flex;
+    flex-direction: column;  /* 자식들을 세로 방향으로 정렬 */
+    align-items: center;  /* 자식들을 중앙 정렬 */
+}
+
+
+/*Todo 임시 로고 이미지 삽입 추후 진짜 로고 제작 및 삽입할것*/
+#logo_temporary {
+    width: 100px;
+    height: 100px;
+    /*이미지가 잘 보이도록 크기 조절 cover의 경우 요소 크기에 맞게 꽉 채우며 비율을 유지*/
+    background-image: url(logo.png);
+    /* background-color: red; */
+    background-size: cover;  
+}
+
+#game_clock{
+    width: 100px;
+    height: 45px;
+    line-height: height;  /* 텍스트의 줄 간격을 박스 높이랑 똑같이 해서, 세로정렬 효과를 준것, 한줄짜리일때는 height 를 쓰면 된다*/ 
+    text-align: center;  /* 텍스트를 가로 중앙정렬 해줌*/
+    background-color: black;
+    color: white;
+    font-family: monospace;  /* ->모든 글자가 고정폭(등폭)폰트로 표기 */
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#right_panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+#screen_game_object {
+    width: 800px;
+    height: 150px;
+    background-color: rgb(99, 194, 150);
+}
+
+#screen_message_box {
+    width: 800px;
+    height: 500px;
+    background-color: pink;
+    display: flex;
+}
+
+#screen_player_info {
+    width: 800px;
+    height: 200px;
+    background-color: darkblue;
+    color: white;
+}
+
+#input_txt_turn {
+    background-color: pink;
+    width: 50px;
+    text-align: right;
+}
